@@ -96,9 +96,12 @@
 <span class="p">}</span>
 </pre></div>
 
+<h2>
+<a name="event-detail-include-only-accepted-request" class="anchor" href="#event-detail-include-only-accepted-request"><span class="octicon octicon-link"></span></a>Event Detail (include only accepted request)</h2>
+
 <p><strong>Action</strong></p>
 
-<p><code>GET /event/{id}</code></p>
+<p><code>GET /event/{event_id}</code></p>
 
 <p><strong>Request</strong></p>
 
@@ -124,6 +127,140 @@
         <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 15:43:37"</span><span class="p">,</span>
         <span class="s2">"current_point"</span><span class="o">:</span> <span class="s2">"50"</span>
     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="event-detail-include-pendding-and-accepted-request" class="anchor" href="#event-detail-include-pendding-and-accepted-request"><span class="octicon octicon-link"></span></a>Event Detail (include pendding and accepted request)</h2>
+
+<p><strong>Action</strong></p>
+
+<p><code>GET /event/accepted/{event_id}</code></p>
+
+<p><strong>Request</strong></p>
+
+<p>/event/1</p>
+
+<p><strong>Response</strong></p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"user_id"</span><span class="o">:</span> <span class="s2">"3"</span><span class="p">,</span>
+    <span class="s2">"where_text"</span><span class="o">:</span> <span class="s2">"Wher aaf0aojfoa"</span><span class="p">,</span>
+    <span class="s2">"start_point"</span><span class="o">:</span> <span class="s2">"5"</span><span class="p">,</span>
+    <span class="s2">"status"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 16:00:25"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 16:00:25"</span><span class="p">,</span>
+    <span class="s2">"location"</span><span class="o">:</span> <span class="s2">"0"</span><span class="p">,</span>
+    <span class="s2">"favours"</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"from_user_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"event_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"bid_point"</span><span class="o">:</span> <span class="s2">"5"</span><span class="p">,</span>
+        <span class="s2">"status"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 18:45:25"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 19:14:09"</span>
+    <span class="p">}],</span>
+    <span class="s2">"user"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"3"</span><span class="p">,</span>
+        <span class="s2">"email"</span><span class="o">:</span> <span class="s2">"saakyz@gmial.comss"</span><span class="p">,</span>
+        <span class="s2">"username"</span><span class="o">:</span> <span class="s2">"netetetesdasd"</span><span class="p">,</span>
+        <span class="s2">"token"</span><span class="o">:</span> <span class="s2">"$2y$08$osZuJxIhuWm6pe\/AM6YkCe0Bx01o04dJzGsNRn6VTV3z17xqi0p.m"</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 15:43:37"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 15:43:37"</span><span class="p">,</span>
+        <span class="s2">"current_point"</span><span class="o">:</span> <span class="s2">"50"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="favour-create" class="anchor" href="#favour-create"><span class="octicon octicon-link"></span></a>Favour Create</h2>
+
+<p>Create Favour</p>
+
+<p>** Action **</p>
+
+<p>GET /favour/create</p>
+
+<p>** Request Params **</p>
+
+<ul>
+<li>event_id: event's id which need to create apply favour to.</li>
+<li>access_token: user's email.</li>
+</ul><p>** Response **</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"event_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"from_user_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"status"</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"bid_point"</span><span class="o">:</span> <span class="s2">"5"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 20:25:47"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 20:25:47"</span><span class="p">,</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">"user_event"</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"user_id"</span><span class="o">:</span> <span class="s2">"3"</span><span class="p">,</span>
+        <span class="s2">"where_text"</span><span class="o">:</span> <span class="s2">"Wher aaf0aojfoa"</span><span class="p">,</span>
+        <span class="s2">"start_point"</span><span class="o">:</span> <span class="s2">"5"</span><span class="p">,</span>
+        <span class="s2">"status"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 16:00:25"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 16:00:25"</span><span class="p">,</span>
+        <span class="s2">"location"</span><span class="o">:</span> <span class="s2">"0"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="accept-favour" class="anchor" href="#accept-favour"><span class="octicon octicon-link"></span></a>Accept Favour</h2>
+
+<p>Accept Favour (Change Favour status to 1)</p>
+
+<p>** Action **</p>
+
+<p>GET /favour/create</p>
+
+<p>** Request Params **</p>
+
+<ul>
+<li>favour_id: id of favour which want to accept.</li>
+<li>access_token: user's email.</li>
+</ul><p>** Response **</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"event_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"from_user_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"status"</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"bid_point"</span><span class="o">:</span> <span class="s2">"5"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 20:25:47"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 20:25:47"</span><span class="p">,</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="reject-favour" class="anchor" href="#reject-favour"><span class="octicon octicon-link"></span></a>Reject Favour</h2>
+
+<p>Reject Favour (Change Favour state to 2)</p>
+
+<p>** Action **</p>
+
+<p>GET /favour/create</p>
+
+<p>** Request Params **</p>
+
+<ul>
+<li>favour_id: id of favour which want to accept.</li>
+<li>access_token: user's email.</li>
+</ul><p>** Response **</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">"event_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"from_user_id"</span><span class="o">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"status"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">"bid_point"</span><span class="o">:</span> <span class="s2">"5"</span><span class="p">,</span>
+    <span class="s2">"updated_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 20:25:47"</span><span class="p">,</span>
+    <span class="s2">"created_at"</span><span class="o">:</span> <span class="s2">"2013-08-23 20:25:47"</span><span class="p">,</span>
+    <span class="s2">"id"</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
       </section>
